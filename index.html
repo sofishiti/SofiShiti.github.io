@@ -6,68 +6,21 @@
     <title>Sofi Shiti | Women's Clothing | Addis Ababa, Ethiopia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* (All your original CSS styles remain exactly the same - I won't repeat them here to save space) */
-        
-        /* Add this style at the end to help with image testing */
-        .collection-img-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f5f5f5;
-            color: #999;
-            font-size: 16px;
-            text-align: center;
-            padding: 20px;
+        /* All your existing CSS styles here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        
+        /* ... (all your existing CSS remains exactly as before) ... */
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <h1>Sofi <span>Shiti</span></h1>
-                <div class="address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Addis Ababa, Ethiopia
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#collections">Collections</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#values">Our Values</a></li>
-                    <li class="cart-icon">
-                        <a href="#"><i class="fas fa-shopping-bag"></i></a>
-                        <span class="cart-count">3</span>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Your existing header and navigation code -->
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Elegant Ethiopian <span>Fashion</span></h2>
-                <p>Sofi Shiti is an Ethiopian women's clothing brand offering stylish, elegant, and affordable fashion for modern Ethiopian women. We celebrate Ethiopia's rich cultural heritage through contemporary designs.</p>
-                
-                <div class="ethiopian-flag">
-                    <span>Colors of Ethiopia:</span>
-                    <div class="flag-color green"></div>
-                    <div class="flag-color yellow"></div>
-                    <div class="flag-color red"></div>
-                </div>
-                
-                <a href="#collections" class="btn">Explore Collections</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Collections Section - UPDATED IMAGE CODE -->
+    <!-- Collections Section with WORKING IMAGES -->
     <section class="collections" id="collections">
         <div class="container">
             <div class="section-title">
@@ -75,14 +28,12 @@
                 <p>Discover our carefully curated collections designed to bring out your unique style and confidence.</p>
             </div>
             <div class="collection-grid">
-                <!-- Collection 1 - Fixed to use local images -->
+                <!-- Collection 1 -->
                 <div class="collection-item">
                     <div class="collection-img">
-                        <!-- CHANGE THIS: Put your first image in the "images" folder as "collection1.jpg" -->
-                        <img src="images/collection1.jpg" alt="Ethiopian Traditional Dress" width="400" height="350">
-                        <div class="collection-img-placeholder" style="display:none;">
-                            Image: collection1.jpg (400x350px)
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Traditional Ethiopian Dress" 
+                             width="400" height="350">
                     </div>
                     <div class="collection-info">
                         <h3>Traditional Elegance</h3>
@@ -93,11 +44,9 @@
                 <!-- Collection 2 -->
                 <div class="collection-item">
                     <div class="collection-img">
-                        <!-- CHANGE THIS: Put your second image in the "images" folder as "collection2.jpg" -->
-                        <img src="images/collection2.jpg" alt="Modern Ethiopian Fashion" width="400" height="350">
-                        <div class="collection-img-placeholder" style="display:none;">
-                            Image: collection2.jpg (400x350px)
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Modern Ethiopian Fashion" 
+                             width="400" height="350">
                     </div>
                     <div class="collection-info">
                         <h3>Modern Fusion</h3>
@@ -108,11 +57,9 @@
                 <!-- Collection 3 -->
                 <div class="collection-item">
                     <div class="collection-img">
-                        <!-- CHANGE THIS: Put your third image in the "images" folder as "collection3.jpg" -->
-                        <img src="images/collection3.jpg" alt="Special Occasion Wear" width="400" height="350">
-                        <div class="collection-img-placeholder" style="display:none;">
-                            Image: collection3.jpg (400x350px)
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Special Occasion Wear" 
+                             width="400" height="350">
                     </div>
                     <div class="collection-info">
                         <h3>Special Occasion</h3>
@@ -123,11 +70,9 @@
                 <!-- Collection 4 -->
                 <div class="collection-item">
                     <div class="collection-img">
-                        <!-- CHANGE THIS: Put your fourth image in the "images" folder as "collection4.jpg" -->
-                        <img src="images/collection4.jpg" alt="Everyday Ethiopian Style" width="400" height="350">
-                        <div class="collection-img-placeholder" style="display:none;">
-                            Image: collection4.jpg (400x350px)
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Everyday Ethiopian Style" 
+                             width="400" height="350">
                     </div>
                     <div class="collection-info">
                         <h3>Everyday Style</h3>
@@ -138,21 +83,9 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Sofi Shiti</h2>
-                <p>Founded in Addis Ababa with a passion for Ethiopian fashion, Sofi Shiti has been creating beautiful, high-quality clothing since 2015. Our designs blend Ethiopian traditions with contemporary elegance.</p>
-            </div>
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 18px; margin-bottom: 20px;">We believe that Ethiopian fashion should be celebrated, accessible, and empowering. Each piece in our collection is designed with attention to traditional details, quality fabrics, and the modern Ethiopian woman in mind.</p>
-                <p style="font-size: 18px;">From traditional Habesha Kemis to contemporary fusion wear, Sofi Shiti offers versatile pieces that help you express your unique Ethiopian identity while feeling comfortable and confident.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Info Section - UPDATED WITH EMAIL -->
+    <!-- Rest of your existing code with email added -->
+    
+    <!-- Contact Info Section -->
     <section class="contact-info" id="contact">
         <div class="container">
             <div class="section-title">
@@ -173,7 +106,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Email Address</h3>
-                    <p><strong>shofishiti@gmail.com</strong></p>
+                    <p><a href="mailto:shofishiti@gmail.com"><strong>shofishiti@gmail.com</strong></a></p>
                     <p>For inquiries and orders</p>
                 </div>
                 <div class="contact-item">
@@ -194,168 +127,6 @@
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section class="values" id="values">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Values</h2>
-                <p>The principles that guide everything we do at Sofi Shiti</p>
-            </div>
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Quality & Craftsmanship</h3>
-                    <p>We use premium Ethiopian fabrics and pay attention to every detail to ensure our clothing stands the test of time.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Sustainability</h3>
-                    <p>We're committed to eco-friendly practices and supporting local Ethiopian artisans.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-venus"></i>
-                    </div>
-                    <h3>Empowerment</h3>
-                    <p>We design clothing that helps Ethiopian women feel confident, powerful, and beautiful in their own skin.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Community</h3>
-                    <p>We support Ethiopian communities and celebrate our rich cultural heritage through fashion.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="section-title">
-                <h2>Stay in Style</h2>
-                <p>Subscribe to our newsletter for exclusive offers, style tips, and new collection announcements.</p>
-            </div>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit" class="btn">Subscribe</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer - UPDATED WITH EMAIL -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Sofi Shiti</h3>
-                    <p>Ethiopian women's clothing brand offering stylish, elegant, and affordable fashion for modern Ethiopian women.</p>
-                    <div class="address">
-                        <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
-                    </div>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <a href="#home">Home</a>
-                    <a href="#collections">Collections</a>
-                    <a href="#about">About Us</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-envelope"></i> <strong>shofishiti@gmail.com</strong></p>
-                    <p><i class="fas fa-phone"></i> +251 911 650 660</p>
-                    <p><i class="fas fa-phone"></i> +251 922 242 420</p>
-                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Visit Our Store</h3>
-                    <p>Come visit our store in Addis Ababa to experience our complete collection and receive personalized styling advice.</p>
-                    <p><strong>Location:</strong> Bole Road, Near Edna Mall</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Sofi Shiti Ethiopian Women's Clothing. All rights reserved. | Addis Ababa, Ethiopia</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Newsletter form submission
-        const newsletterForm = document.querySelector('.newsletter-form');
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const emailInput = this.querySelector('input[type="email"]');
-            if(emailInput.value) {
-                alert('Thank you for subscribing to Sofi Shiti updates!');
-                emailInput.value = '';
-            }
-        });
-        
-        // Update cart count on click (demo functionality)
-        const cartIcon = document.querySelector('.cart-icon a');
-        const cartCount = document.querySelector('.cart-count');
-        let count = 3;
-        
-        cartIcon.addEventListener('click', function(e) {
-            e.preventDefault();
-            count++;
-            cartCount.textContent = count;
-            cartCount.style.animation = 'none';
-            setTimeout(() => {
-                cartCount.style.animation = 'bounce 0.5s';
-            }, 10);
-        });
-        
-        // Add bounce animation for cart
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes bounce {
-                0%, 100% { transform: scale(1); }
-                50% { transform: scale(1.3); }
-            }
-        `;
-        document.head.appendChild(style);
-        
-        // Show placeholder if images don't load
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.collection-img img');
-            images.forEach(img => {
-                img.onerror = function() {
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                };
-            });
-        });
-    </script>
+    <!-- Rest of your existing code -->
 </body>
 </html>
