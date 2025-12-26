@@ -3,130 +3,989 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sofi Shiti | Women's Clothing | Addis Ababa, Ethiopia</title>
+    <title>Sofi Shiti | Ethiopian Women's Clothing | Addis Ababa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* All your existing CSS styles here */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        /* ... (all your existing CSS remains exactly as before) ... */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            color: #d87093;
+            font-size: 52px;
+            letter-spacing: 2px;
+            line-height: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 5px;
+        }
+        
+        .logo .ethiopian {
+            font-size: 18px;
+            color: #f9a825;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #f9a825, #d87093);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo .address {
+            font-size: 14px;
+            color: #2d572c;
+            font-weight: 500;
+            margin-top: 3px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .logo span {
+            color: #2d572c;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: #d87093;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #d87093, #f9a825);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .cart-icon {
+            position: relative;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(45deg, #d87093, #f9a825);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(255, 240, 245, 0.85), rgba(255, 240, 245, 0.85)), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            margin-top: 90px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            text-align: left;
+            z-index: 2;
+        }
+        
+        .hero h2 {
+            font-size: 58px;
+            font-family: 'Playfair Display', serif;
+            color: #2d572c;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h2 span {
+            color: #d87093;
+            font-style: italic;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #666;
+            font-weight: 300;
+        }
+        
+        .ethiopian-flag {
+            display: inline-flex;
+            margin-top: 15px;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .flag-color {
+            width: 30px;
+            height: 6px;
+        }
+        
+        .green { background-color: #078930; }
+        .yellow { background-color: #f9a825; }
+        .red { background-color: #da121a; }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #d87093, #f9a825);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(216, 112, 147, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(216, 112, 147, 0.4);
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #2d572c;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #d87093, #f9a825);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: #777;
+            max-width: 700px;
+            margin: 25px auto 0;
+            font-size: 18px;
+        }
+        
+        /* Traditional Ethiopian Collections */
+        .collections {
+            background-color: #fff;
+        }
+        
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .collection-item {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s;
+            position: relative;
+        }
+        
+        .collection-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .collection-img {
+            height: 380px;
+            overflow: hidden;
+        }
+        
+        .collection-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s;
+        }
+        
+        .collection-item:hover .collection-img img {
+            transform: scale(1.1);
+        }
+        
+        .collection-info {
+            padding: 25px;
+            position: relative;
+        }
+        
+        .collection-info h3 {
+            margin-bottom: 10px;
+            color: #2d572c;
+            font-size: 22px;
+        }
+        
+        .collection-info p {
+            color: #d87093;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .collection-tag {
+            position: absolute;
+            top: -15px;
+            left: 25px;
+            background: linear-gradient(45deg, #d87093, #f9a825);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Traditional Ethiopian Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 40px 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .value-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            font-size: 48px;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #d87093, #f9a825);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .value-item h3 {
+            margin-bottom: 15px;
+            color: #2d572c;
+            font-size: 22px;
+        }
+        
+        /* Location Section */
+        .location {
+            background-color: #f9f9f9;
+        }
+        
+        .location-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .location-info {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .location-info h3 {
+            color: #2d572c;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .location-details {
+            margin-top: 25px;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .detail-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #d87093, #f9a825);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .detail-text h4 {
+            color: #2d572c;
+            margin-bottom: 5px;
+        }
+        
+        .location-map {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 18px;
+            position: relative;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(45, 87, 44, 0.1), rgba(45, 87, 44, 0.1));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .map-overlay i {
+            font-size: 60px;
+            margin-bottom: 15px;
+            color: #d87093;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(rgba(45, 87, 44, 0.9), rgba(45, 87, 44, 0.9)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .newsletter .section-title h2,
+        .newsletter .section-title p {
+            color: white;
+        }
+        
+        .newsletter-form {
+            max-width: 550px;
+            margin: 40px auto 0;
+            display: flex;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 18px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .newsletter-form button {
+            border-radius: 0 30px 30px 0;
+            padding: 0 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2d572c;
+            color: white;
+            padding: 70px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h3 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer-col p, .footer-col a {
+            color: #ddd;
+            margin-bottom: 12px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col a:hover {
+            color: #f9a825;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            color: white;
+        }
+        
+        .social-icons a:hover {
+            background: linear-gradient(45deg, #d87093, #f9a825);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .logo h1 {
+                font-size: 42px;
+            }
+            
+            .hero h2 {
+                font-size: 48px;
+            }
+            
+            .about-content, .location-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .logo h1 {
+                font-size: 36px;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 100px 0 60px;
+                text-align: center;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 30px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 30px;
+                width: 100%;
+            }
+            
+            .section-title h2 {
+                font-size: 32px;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Your existing header and navigation code -->
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Sofi <span>Shiti</span></h1>
+                <div class="ethiopian">Ethiopian Women's Clothing</div>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Addis Ababa, Ethiopia
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#location">Our Location</a></li>
+                    <li><a href="#values">Our Values</a></li>
+                    <li class="cart-icon">
+                        <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                        <span class="cart-count">3</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Collections Section with WORKING IMAGES -->
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Traditional Ethiopian <span>Elegance</span></h2>
+                <p>Sofi Shiti is an Ethiopian women's clothing brand offering stylish, elegant, and authentic fashion for modern Ethiopian women. We celebrate Ethiopia's rich cultural heritage through contemporary designs.</p>
+                <p>We believe every Ethiopian woman deserves to look and feel beautiful while honoring her cultural roots.</p>
+                
+                <div class="ethiopian-flag">
+                    <span>Colors of Ethiopia:</span>
+                    <div class="flag-color green"></div>
+                    <div class="flag-color yellow"></div>
+                    <div class="flag-color red"></div>
+                </div>
+                
+                <a href="#collections" class="btn">Explore Our Collections</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditional Ethiopian Collections -->
     <section class="collections" id="collections">
         <div class="container">
             <div class="section-title">
-                <h2>Our Collections</h2>
-                <p>Discover our carefully curated collections designed to bring out your unique style and confidence.</p>
+                <h2>Traditional Ethiopian Collections</h2>
+                <p>Discover our carefully curated collections that blend traditional Ethiopian styles with modern fashion sensibilities.</p>
             </div>
             <div class="collection-grid">
-                <!-- Collection 1 -->
                 <div class="collection-item">
+                    <div class="collection-tag">Habesha Kemis</div>
                     <div class="collection-img">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Traditional Ethiopian Dress" 
-                             width="400" height="350">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Habesha Kemis Collection">
                     </div>
                     <div class="collection-info">
-                        <h3>Traditional Elegance</h3>
+                        <h3>Traditional Habesha Kemis</h3>
                         <p>$89 - $249</p>
                     </div>
                 </div>
-                
-                <!-- Collection 2 -->
                 <div class="collection-item">
+                    <div class="collection-tag">Modern Fusion</div>
                     <div class="collection-img">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Modern Ethiopian Fashion" 
-                             width="400" height="350">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Modern Ethiopian Fashion">
                     </div>
                     <div class="collection-info">
-                        <h3>Modern Fusion</h3>
-                        <p>$39 - $129</p>
+                        <h3>Modern Ethiopian Fusion</h3>
+                        <p>$59 - $189</p>
                     </div>
                 </div>
-                
-                <!-- Collection 3 -->
                 <div class="collection-item">
+                    <div class="collection-tag">Special Occasion</div>
                     <div class="collection-img">
-                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Special Occasion Wear" 
-                             width="400" height="350">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Ethiopian Special Occasion Wear">
                     </div>
                     <div class="collection-info">
-                        <h3>Special Occasion</h3>
-                        <p>$59 - $199</p>
+                        <h3>Special Occasion Wear</h3>
+                        <p>$129 - $399</p>
                     </div>
                 </div>
-                
-                <!-- Collection 4 -->
                 <div class="collection-item">
+                    <div class="collection-tag">Everyday Elegance</div>
                     <div class="collection-img">
-                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Everyday Ethiopian Style" 
-                             width="400" height="350">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Ethiopian Casual Wear">
                     </div>
                     <div class="collection-info">
-                        <h3>Everyday Style</h3>
-                        <p>$29 - $99</p>
+                        <h3>Everyday Ethiopian Elegance</h3>
+                        <p>$49 - $159</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rest of your existing code with email added -->
-    
-    <!-- Contact Info Section -->
-    <section class="contact-info" id="contact">
+    <!-- About Section -->
+    <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Visit our store in Addis Ababa or contact us for more information</p>
+                <h2>About Sofi Shiti</h2>
+                <p>Founded in Addis Ababa with a passion for celebrating Ethiopian culture through fashion, Sofi Shiti has been creating beautiful, high-quality traditional clothing since 2010.</p>
             </div>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Our Address</h3>
-                    <p>Addis Ababa, Ethiopia</p>
-                    <p>Bole Road, Near Edna Mall</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We believe that Ethiopian fashion should be celebrated, accessible, and empowering. Each piece in our collection is designed with attention to traditional details, quality fabrics, and the modern Ethiopian woman in mind.</p>
+                    <p>From traditional Habesha Kemis to contemporary fusion wear, Sofi Shiti offers versatile pieces that help you express your unique Ethiopian identity while feeling comfortable and confident.</p>
+                    <p>Our designs incorporate traditional Ethiopian patterns, colors, and craftsmanship while adapting to modern styles and comfort requirements.</p>
+                    <a href="#location" class="btn">Visit Our Store</a>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Address</h3>
-                    <p><a href="mailto:shofishiti@gmail.com"><strong>shofishiti@gmail.com</strong></a></p>
-                    <p>For inquiries and orders</p>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Ethiopian Fashion Design">
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+                <p>Visit our flagship store in the heart of Addis Ababa, Ethiopia</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Sofi Shiti Flagship Store</h3>
+                    <p>Located in the vibrant heart of Addis Ababa, our flagship store offers the complete Sofi Shiti experience. Browse our collections, get personalized styling advice, and experience Ethiopian hospitality at its finest.</p>
+                    
+                    <div class="location-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail-text">
+                                <h4>Address</h4>
+                                <p>Bole Road, Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="detail-text">
+                                <h4>Opening Hours</h4>
+                                <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                                <p>Sunday: 11:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="detail-text">
+                                <h4>Contact</h4>
+                                <p>+251 11 123 4567</p>
+                                <p>info@sofishiti.com</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Phone Numbers</h3>
-                    <div class="phone-number">
-                        <i class="fas fa-mobile-alt"></i>
-                        <p>+251 911 650 660</p>
-                    </div>
-                    <div class="phone-number">
-                        <i class="fas fa-mobile-alt"></i>
-                        <p>+251 922 242 420</p>
+                    
+                    <a href="https://maps.google.com/?q=Addis+Ababa,Ethiopia" target="_blank" class="btn" style="margin-top: 20px;">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
+                
+                <div class="location-map">
+                    <div class="map-overlay">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Addis Ababa, Ethiopia</p>
+                        <p>Bole Road Location</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rest of your existing code -->
+    <!-- Ethiopian Values Section -->
+    <section class="values" id="values">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Ethiopian Values</h2>
+                <p>The principles that guide everything we do at Sofi Shiti, rooted in Ethiopian culture</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community (መስተጋብር)</h3>
+                    <p>We support Ethiopian artisans and contribute to local community development.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Heritage (ቅድመ ታሪክ)</h3>
+                    <p>We honor and preserve traditional Ethiopian craftsmanship and designs.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h3>Quality (ጥራት)</h3>
+                    <p>We use premium Ethiopian fabrics like cotton and handwoven materials.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Empowerment (ማጎልመስ)</h3>
+                    <p>We empower Ethiopian women through fashion and employment opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="section-title">
+                <h2>Stay Connected</h2>
+                <p>Subscribe to our newsletter for exclusive offers, traditional style tips, and new collection announcements.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Sofi Shiti</h3>
+                    <p>Ethiopian women's clothing brand offering stylish, elegant, and authentic fashion for modern Ethiopian women.</p>
+                    <div class="address-footer">
+                        <p><i class="fas fa-map-marker-alt"></i> Bole Road, Addis Ababa, Ethiopia</p>
+                        <p><i class="fas fa-phone"></i> +251 11 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@sofishiti.com</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Collections</h3>
+                    <a href="#collections">Habesha Kemis</a>
+                    <a href="#collections">Modern Fusion</a>
+                    <a href="#collections">Special Occasion</a>
+                    <a href="#collections">Everyday Elegance</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <a href="#">Size Guide</a>
+                    <a href="#">Traditional Care Instructions</a>
+                    <a href="#">Shipping & Delivery</a>
+                    <a href="#">Returns & Exchanges</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit Our Store</h3>
+                    <p>Come visit our flagship store in Addis Ababa to experience our complete collection and receive personalized styling advice.</p>
+                    <p><strong>Opening Hours:</strong></p>
+                    <p>Mon-Sat: 9:00 AM - 8:00 PM</p>
+                    <p>Sun: 11:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Sofi Shiti Ethiopian Women's Clothing. All rights reserved. | Proudly based in Addis Ababa, Ethiopia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 90,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('.newsletter-form');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            if(emailInput.value) {
+                alert('Thank you for subscribing to Sofi Shiti Ethiopian fashion updates!');
+                emailInput.value = '';
+            }
+        });
+        
+        // Update cart count on click (demo functionality)
+        const cartIcon = document.querySelector('.cart-icon a');
+        const cartCount = document.querySelector('.cart-count');
+        let count = 3;
+        
+        cartIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            count++;
+            cartCount.textContent = count;
+            cartCount.style.animation = 'none';
+            setTimeout(() => {
+                cartCount.style.animation = 'bounce 0.5s';
+            }, 10);
+        });
+        
+        // Add bounce animation for cart
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes bounce {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.3); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Ethiopian greeting on page load
+        window.addEventListener('load', function() {
+            const greetings = ["እንኳን ደህና መጡ!", "Welcome to Sofi Shiti!", "በደህና መጡ!"];
+            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+            console.log(`%c${randomGreeting}`, 'color: #d87093; font-size: 16px; font-weight: bold;');
+        });
+    </script>
 </body>
 </html>
