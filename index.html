@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sofi Shiti | Women's Clothing</title>
+    <title>Sofi Shiti | Women's Clothing | Addis Ababa, Ethiopia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -44,19 +44,31 @@
         
         .logo {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
         }
         
         .logo h1 {
             font-family: 'Playfair Display', serif;
             color: #d87093;
-            font-size: 28px;
+            font-size: 32px;
             letter-spacing: 1px;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .logo .address {
+            font-size: 14px;
+            color: #2d572c;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
         
         .logo span {
-            color: #333;
-            font-weight: 300;
+            color: #2d572c;
+            font-weight: 700;
         }
         
         nav ul {
@@ -65,7 +77,7 @@
         }
         
         nav ul li {
-            margin-left: 30px;
+            margin-left: 25px;
         }
         
         nav ul li a {
@@ -100,7 +112,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(255, 240, 245, 0.9), rgba(255, 240, 245, 0.9)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(255, 240, 245, 0.9), rgba(255, 240, 245, 0.9));
             background-size: cover;
             background-position: center;
             height: 85vh;
@@ -117,9 +129,13 @@
         .hero h2 {
             font-size: 48px;
             font-family: 'Playfair Display', serif;
-            color: #333;
+            color: #2d572c;
             margin-bottom: 15px;
             line-height: 1.2;
+        }
+        
+        .hero h2 span {
+            color: #d87093;
         }
         
         .hero p {
@@ -127,6 +143,22 @@
             margin-bottom: 30px;
             color: #666;
         }
+        
+        .ethiopian-flag {
+            display: inline-flex;
+            margin: 15px 0;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .flag-color {
+            width: 30px;
+            height: 6px;
+        }
+        
+        .green { background-color: #078930; }
+        .yellow { background-color: #f9a825; }
+        .red { background-color: #da121a; }
         
         .btn {
             display: inline-block;
@@ -160,7 +192,7 @@
         .section-title h2 {
             font-family: 'Playfair Display', serif;
             font-size: 36px;
-            color: #333;
+            color: #2d572c;
             margin-bottom: 15px;
         }
         
@@ -196,6 +228,11 @@
         .collection-img {
             height: 350px;
             overflow: hidden;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
         }
         
         .collection-img img {
@@ -250,6 +287,37 @@
             color: #333;
         }
         
+        /* Contact Info Section */
+        .contact-info {
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-icon {
+            font-size: 40px;
+            color: #d87093;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 15px;
+            color: #2d572c;
+        }
+        
         /* Newsletter */
         .newsletter {
             background-color: #fce4ec;
@@ -277,7 +345,7 @@
         
         /* Footer */
         footer {
-            background-color: #333;
+            background-color: #2d572c;
             color: white;
             padding: 60px 0 30px;
         }
@@ -303,7 +371,14 @@
         }
         
         .footer-col a:hover {
-            color: #d87093;
+            color: #f9a825;
+        }
+        
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
         }
         
         .social-icons {
@@ -341,6 +416,12 @@
             .header-container {
                 flex-direction: column;
                 padding: 15px 0;
+            }
+            
+            .logo {
+                align-items: center;
+                text-align: center;
+                margin-bottom: 10px;
             }
             
             nav ul {
@@ -387,14 +468,18 @@
         <div class="container header-container">
             <div class="logo">
                 <h1>Sofi <span>Shiti</span></h1>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Addis Ababa, Ethiopia
+                </div>
             </div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#collections">Collections</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#values">Our Values</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#values">Our Values</a></li>
                     <li class="cart-icon">
                         <a href="#"><i class="fas fa-shopping-bag"></i></a>
                         <span class="cart-count">3</span>
@@ -408,8 +493,16 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h2>Elegant Fashion for the Modern Woman</h2>
-                <p>Sofi Shiti is a women's clothing brand offering stylish, elegant, and affordable fashion for modern women. We believe every woman deserves to look and feel beautiful.</p>
+                <h2>Elegant Ethiopian <span>Fashion</span></h2>
+                <p>Sofi Shiti is an Ethiopian women's clothing brand offering stylish, elegant, and affordable fashion for modern Ethiopian women. We celebrate Ethiopia's rich cultural heritage through contemporary designs.</p>
+                
+                <div class="ethiopian-flag">
+                    <span>Colors of Ethiopia:</span>
+                    <div class="flag-color green"></div>
+                    <div class="flag-color yellow"></div>
+                    <div class="flag-color red"></div>
+                </div>
+                
                 <a href="#collections" class="btn">Explore Collections</a>
             </div>
         </div>
@@ -425,37 +518,41 @@
             <div class="collection-grid">
                 <div class="collection-item">
                     <div class="collection-img">
-                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Evening Wear Collection">
+                        <!-- Replace with your image: images/collection1.jpg -->
+                        <img src="images/collection1.jpg" alt="Ethiopian Traditional Wear">
                     </div>
                     <div class="collection-info">
-                        <h3>Evening Elegance</h3>
+                        <h3>Traditional Elegance</h3>
                         <p>$89 - $249</p>
                     </div>
                 </div>
                 <div class="collection-item">
                     <div class="collection-img">
-                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Casual Wear Collection">
+                        <!-- Replace with your image: images/collection2.jpg -->
+                        <img src="images/collection2.jpg" alt="Modern Ethiopian Fashion">
                     </div>
                     <div class="collection-info">
-                        <h3>Casual Comfort</h3>
+                        <h3>Modern Fusion</h3>
                         <p>$39 - $129</p>
                     </div>
                 </div>
                 <div class="collection-item">
                     <div class="collection-img">
-                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w-1350&q=80" alt="Office Wear Collection">
+                        <!-- Replace with your image: images/collection3.jpg -->
+                        <img src="images/collection3.jpg" alt="Special Occasion Wear">
                     </div>
                     <div class="collection-info">
-                        <h3>Office Chic</h3>
+                        <h3>Special Occasion</h3>
                         <p>$59 - $199</p>
                     </div>
                 </div>
                 <div class="collection-item">
                     <div class="collection-img">
-                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Summer Collection">
+                        <!-- Replace with your image: images/collection4.jpg -->
+                        <img src="images/collection4.jpg" alt="Everyday Ethiopian Wear">
                     </div>
                     <div class="collection-info">
-                        <h3>Summer Breeze</h3>
+                        <h3>Everyday Style</h3>
                         <p>$29 - $99</p>
                     </div>
                 </div>
@@ -468,11 +565,53 @@
         <div class="container">
             <div class="section-title">
                 <h2>About Sofi Shiti</h2>
-                <p>Founded with a passion for empowering women through fashion, Sofi Shiti has been creating beautiful, high-quality clothing since 2015. Our designs blend contemporary trends with timeless elegance.</p>
+                <p>Founded in Addis Ababa with a passion for Ethiopian fashion, Sofi Shiti has been creating beautiful, high-quality clothing since 2015. Our designs blend Ethiopian traditions with contemporary elegance.</p>
             </div>
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 18px; margin-bottom: 20px;">We believe that fashion should be accessible, sustainable, and empowering. Each piece in our collection is designed with attention to detail, quality fabrics, and the modern woman in mind.</p>
-                <p style="font-size: 18px;">From casual daywear to elegant evening attire, Sofi Shiti offers versatile pieces that help you express your unique style while feeling comfortable and confident.</p>
+                <p style="font-size: 18px; margin-bottom: 20px;">We believe that Ethiopian fashion should be celebrated, accessible, and empowering. Each piece in our collection is designed with attention to traditional details, quality fabrics, and the modern Ethiopian woman in mind.</p>
+                <p style="font-size: 18px;">From traditional Habesha Kemis to contemporary fusion wear, Sofi Shiti offers versatile pieces that help you express your unique Ethiopian identity while feeling comfortable and confident.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Visit our store in Addis Ababa or contact us for more information</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Address</h3>
+                    <p>Addis Ababa, Ethiopia</p>
+                    <p>Bole Road, Near Edna Mall</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Numbers</h3>
+                    <div class="phone-number">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>+251 911 650 660</p>
+                    </div>
+                    <div class="phone-number">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>+251 922 242 420</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                    <p>Sunday: 11:00 AM - 6:00 PM</p>
+                </div>
             </div>
         </div>
     </section>
@@ -490,28 +629,28 @@
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>Quality & Craftsmanship</h3>
-                    <p>We use premium fabrics and pay attention to every detail to ensure our clothing stands the test of time.</p>
+                    <p>We use premium Ethiopian fabrics and pay attention to every detail to ensure our clothing stands the test of time.</p>
                 </div>
                 <div class="value-item">
                     <div class="value-icon">
                         <i class="fas fa-leaf"></i>
                     </div>
                     <h3>Sustainability</h3>
-                    <p>We're committed to eco-friendly practices and materials, reducing our environmental footprint.</p>
+                    <p>We're committed to eco-friendly practices and supporting local Ethiopian artisans.</p>
                 </div>
                 <div class="value-item">
                     <div class="value-icon">
                         <i class="fas fa-venus"></i>
                     </div>
                     <h3>Empowerment</h3>
-                    <p>We design clothing that helps women feel confident, powerful, and beautiful in their own skin.</p>
+                    <p>We design clothing that helps Ethiopian women feel confident, powerful, and beautiful in their own skin.</p>
                 </div>
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>Inclusivity</h3>
-                    <p>Our collections are designed for women of all shapes, sizes, and backgrounds.</p>
+                    <h3>Community</h3>
+                    <p>We support Ethiopian communities and celebrate our rich cultural heritage through fashion.</p>
                 </div>
             </div>
         </div>
@@ -532,17 +671,20 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>Sofi Shiti</h3>
-                    <p>Women's clothing brand offering stylish, elegant, and affordable fashion for modern women.</p>
+                    <p>Ethiopian women's clothing brand offering stylish, elegant, and affordable fashion for modern Ethiopian women.</p>
+                    <div class="address">
+                        <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                    </div>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -550,24 +692,23 @@
                     <a href="#home">Home</a>
                     <a href="#collections">Collections</a>
                     <a href="#about">About Us</a>
-                    <a href="#values">Our Values</a>
+                    <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-col">
-                    <h3>Customer Service</h3>
-                    <a href="#">Shipping Policy</a>
-                    <a href="#">Returns & Exchanges</a>
-                    <a href="#">Size Guide</a>
-                    <a href="#">FAQs</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Avenue, Style City</p>
-                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +251 911 650 660</p>
+                    <p><i class="fas fa-phone"></i> +251 922 242 420</p>
                     <p><i class="fas fa-envelope"></i> info@sofishiti.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit Our Store</h3>
+                    <p>Come visit our store in Addis Ababa to experience our complete collection and receive personalized styling advice.</p>
+                    <p><strong>Location:</strong> Bole Road, Near Edna Mall</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Sofi Shiti. All rights reserved. | Designed with elegance in mind</p>
+                <p>&copy; 2023 Sofi Shiti Ethiopian Women's Clothing. All rights reserved. | Addis Ababa, Ethiopia</p>
             </div>
         </div>
     </footer>
