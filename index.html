@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="am">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ሶፊ ሽቲ | የኢትዮጵያ ሴቶች ልብሶች | አዲስ አበባ</title>
+    <title>Sofi Shiti | Ethiopian Women's Clothing</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,11 +14,10 @@
         }
         
         body {
-            font-family: 'Noto Sans Ethiopic', 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #fff0f5;
             color: #333;
             line-height: 1.6;
-            direction: ltr;
         }
         
         .container {
@@ -53,31 +52,21 @@
         .logo h1 {
             font-family: 'Playfair Display', serif;
             color: #d87093;
-            font-size: 52px;
+            font-size: 42px;
             letter-spacing: 2px;
             line-height: 1;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 5px;
         }
         
         .logo .ethiopian {
-            font-size: 18px;
+            font-size: 16px;
             color: #f9a825;
             font-weight: 600;
+            margin-top: 5px;
             letter-spacing: 1px;
             background: linear-gradient(45deg, #f9a825, #d87093);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        
-        .logo .address {
-            font-size: 14px;
-            color: #2d572c;
-            font-weight: 500;
-            margin-top: 3px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
         }
         
         .logo span {
@@ -144,13 +133,13 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(255, 240, 245, 0.85), rgba(255, 240, 245, 0.85)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(255, 240, 245, 0.85), rgba(255, 240, 245, 0.85)), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             height: 90vh;
             display: flex;
             align-items: center;
-            margin-top: 90px;
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -162,7 +151,7 @@
         }
         
         .hero h2 {
-            font-size: 58px;
+            font-size: 52px;
             font-family: 'Playfair Display', serif;
             color: #2d572c;
             margin-bottom: 20px;
@@ -184,13 +173,12 @@
         .ethiopian-flag {
             display: inline-flex;
             margin-top: 15px;
-            align-items: center;
-            gap: 10px;
         }
         
         .flag-color {
             width: 30px;
             height: 6px;
+            margin-right: 5px;
         }
         
         .green { background-color: #078930; }
@@ -255,7 +243,7 @@
             font-size: 18px;
         }
         
-        /* Traditional Ethiopian Collections */
+        /* Traditional Collections */
         .collections {
             background-color: #fff;
         }
@@ -355,7 +343,7 @@
             display: block;
         }
         
-        /* Traditional Ethiopian Values */
+        /* Values */
         .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -390,95 +378,9 @@
             font-size: 22px;
         }
         
-        /* Location Section */
-        .location {
-            background-color: #f9f9f9;
-        }
-        
-        .location-content {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-        
-        .location-info {
-            flex: 1;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-        
-        .location-info h3 {
-            color: #2d572c;
-            font-size: 28px;
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .location-details {
-            margin-top: 25px;
-        }
-        
-        .detail-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .detail-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(45deg, #d87093, #f9a825);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        
-        .detail-text h4 {
-            color: #2d572c;
-            margin-bottom: 5px;
-        }
-        
-        .location-map {
-            flex: 1;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            height: 400px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 18px;
-            position: relative;
-        }
-        
-        .map-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(45, 87, 44, 0.1), rgba(45, 87, 44, 0.1));
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .map-overlay i {
-            font-size: 60px;
-            margin-bottom: 15px;
-            color: #d87093;
-        }
-        
         /* Newsletter */
         .newsletter {
-            background: linear-gradient(rgba(45, 87, 44, 0.9), rgba(45, 87, 44, 0.9)), url('https://i.pinimg.com/736x/5e/8d/3b/5e8d3b84cce5696ecb6c9ed9c50ebdf5.jpg');
+            background: linear-gradient(rgba(45, 87, 44, 0.9), rgba(45, 87, 44, 0.9)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -544,275 +446,4 @@
         }
         
         .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-icons a {
-            background-color: rgba(255, 255, 255, 0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            color: white;
-        }
-        
-        .social-icons a:hover {
-            background: linear-gradient(45deg, #d87093, #f9a825);
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #bbb;
-            font-size: 14px;
-        }
-        
-        /* Amharic Text Styles */
-        .amharic-text {
-            font-family: 'Noto Sans Ethiopic', sans-serif;
-            line-height: 1.8;
-        }
-        
-        .amharic-title {
-            font-family: 'Noto Sans Ethiopic', sans-serif;
-            font-weight: 700;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .logo h1 {
-                font-size: 42px;
-            }
-            
-            .hero h2 {
-                font-size: 48px;
-            }
-            
-            .about-content, .location-content {
-                flex-direction: column;
-                gap: 40px;
-            }
-            
-            .header-container {
-                flex-direction: column;
-                padding: 15px 0;
-            }
-            
-            nav ul {
-                margin-top: 15px;
-            }
-            
-            nav ul li {
-                margin: 0 10px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .logo h1 {
-                font-size: 36px;
-            }
-            
-            .hero {
-                height: auto;
-                padding: 100px 0 60px;
-                text-align: center;
-            }
-            
-            .hero-content {
-                text-align: center;
-            }
-            
-            .hero h2 {
-                font-size: 36px;
-            }
-            
-            .newsletter-form {
-                flex-direction: column;
-            }
-            
-            .newsletter-form input {
-                border-radius: 30px;
-                margin-bottom: 10px;
-            }
-            
-            .newsletter-form button {
-                border-radius: 30px;
-                width: 100%;
-            }
-            
-            .section-title h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <h1>ሶፊ ሽቲ</h1>
-                <div class="ethiopian amharic-text">የኢትዮጵያ ሴቶች ልብሶች</div>
-                <div class="address">
-                    <i class="fas fa-map-marker-alt"></i>
-                    አዲስ አበባ, ኢትዮጵያ
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home" class="amharic-text">መነሻ</a></li>
-                    <li><a href="#collections" class="amharic-text">ስብሰባዎች</a></li>
-                    <li><a href="#about" class="amharic-text">ስለ እኛ</a></li>
-                    <li><a href="#location" class="amharic-text">አድራሻ</a></li>
-                    <li><a href="#values" class="amharic-text">እሴቶቻችን</a></li>
-                    <li class="cart-icon">
-                        <a href="#"><i class="fas fa-shopping-bag"></i></a>
-                        <span class="cart-count">3</span>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="amharic-title">የኢትዮጵያ ሥልጣኔ <span>ልብስ</span></h2>
-                <p class="amharic-text">ሶፊ ሽቲ የኢትዮጵያ ሴቶች ልብስ ነው። ዘመናዊ ኢትዮጵያዊ ሴቶች ለሚሆኑ የሚስማሙ፣ የሚያምሩ እና ርካሽ ፋሽን እንሰጣለን። ባህላዊ ኢትዮጵያን በዘመናዊ ዲዛይን እናከብራለን።</p>
-                <p class="amharic-text">እያንዳንዷ ኢትዮጵያዊት ሴት ባህላዊ ሥልጣኔዋን በማክበር ቆንጆ እንድትመስል እና ቆንጆ እንድትሰማ እናምናለን።</p>
-                
-                <div class="ethiopian-flag">
-                    <span class="amharic-text">የኢትዮጵያ ባንዲራ ቀለሞች፡</span>
-                    <div class="flag-color green"></div>
-                    <div class="flag-color yellow"></div>
-                    <div class="flag-color red"></div>
-                </div>
-                
-                <a href="#collections" class="btn amharic-text">ስብሰባችንን ይመልከቱ</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Traditional Ethiopian Collections -->
-    <section class="collections" id="collections">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="amharic-title">የኢትዮጵያ ልብስ ስብሰባዎች</h2>
-                <p class="amharic-text">ባህላዊ ኢትዮጵያዊ ዘይቤዎችን በዘመናዊ ፋሽን ጋር የሚያጣምሩ የልብስ ስብሰባችንን ይመልከቱ።</p>
-            </div>
-            <div class="collection-grid">
-                <div class="collection-item">
-                    <div class="collection-tag amharic-text">ሐበሻ ቀሚስ</div>
-                    <div class="collection-img">
-                        <img src="https://i.pinimg.com/736x/5e/8d/3b/5e8d3b84cce5696ecb6c9ed9c50ebdf5.jpg" alt="ሐበሻ ቀሚስ ስብሰባ">
-                    </div>
-                    <div class="collection-info">
-                        <h3 class="amharic-text">ባህላዊ ሐበሻ ቀሚስ</h3>
-                        <p>89 - 249 ብር</p>
-                    </div>
-                </div>
-                <div class="collection-item">
-                    <div class="collection-tag amharic-text">ዘመናዊ ፊውዥን</div>
-                    <div class="collection-img">
-                        <img src="https://i.pinimg.com/736x/f5/23/dd/f523dd73e2f3dcd357020a6b1259ea08.jpg" alt="ዘመናዊ ኢትዮጵያዊ ፋሽን">
-                    </div>
-                    <div class="collection-info">
-                        <h3 class="amharic-text">ዘመናዊ ኢትዮጵያዊ ፊውዥን</h3>
-                        <p>59 - 189 ብር</p>
-                    </div>
-                </div>
-                <div class="collection-item">
-                    <div class="collection-tag amharic-text">ልዩ ክስተት</div>
-                    <div class="collection-img">
-                        <img src="https://i.pinimg.com/736x/3d/4f/c8/3d4fc894e17062403c9b8c5ac3278a0f.jpg" alt="ልዩ ክስተት ልብስ">
-                    </div>
-                    <div class="collection-info">
-                        <h3 class="amharic-text">ልዩ ክስተት ልብሶች</h3>
-                        <p>129 - 399 ብር</p>
-                    </div>
-                </div>
-                <div class="collection-item">
-                    <div class="collection-tag amharic-text">ዕለታዊ ሥልጣኔ</div>
-                    <div class="collection-img">
-                        <img src="https://i.pinimg.com/736x/5e/b6/fd/5eb6fdb3e4c7b8e3c9ec408a68cd4f8b.jpg" alt="ዕለታዊ ልብሶች">
-                    </div>
-                    <div class="collection-info">
-                        <h3 class="amharic-text">ዕለታዊ ኢትዮጵያዊ ሥልጣኔ</h3>
-                        <p>49 - 159 ብር</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="amharic-title">ስለ ሶፊ ሽቲ</h2>
-                <p class="amharic-text">በ2010 ከአዲስ አበባ ጀምሮ ባህላዊ ኢትዮጵያን በፋሽን በመደከብ ትልቅ ትኩረት በማድረግ ሶፊ ሽቲ ውብ፣ ከፍተኛ ጥራት ያለው ባህላዊ ልብስ እያዘጋጀ ነው።</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="amharic-text">ኢትዮጵያዊ ፋሽን ሊከበር፣ ሊደረስበት እና ኃይል ሊሰጥ ይገባል ብለን እናምናለን። በስብሰባችን ውስጥ ያለው እያንዳንዱ ክፍል ባህላዊ ዝርዝሮች፣ ጥራት ያላቸው ጨርቆች እና ዘመናዊ ኢትዮጵያዊት ሴት ግምት ውስጥ በማስገባት ተዘጋጅቷል።</p>
-                    <p class="amharic-text">ከባህላዊ ሐበሻ ቀሚስ እስከ ዘመናዊ ፊውዥን ልብስ ድረስ፣ ሶፊ ሽቲ የራስዎን ልዩ ኢትዮጵያዊነት ለመግለጽ የሚያግዙ የተለያዩ ክፍሎችን ያቀርባል።</p>
-                    <p class="amharic-text">ዲዛይናችን የባህላዊ ኢትዮጵያዊ ምስሎችን፣ ቀለሞችን እና ሥራ እድሜን ያካትታል።</p>
-                    <a href="#location" class="btn amharic-text">መደብራችንን ይጎብኙ</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://i.pinimg.com/736x/8d/4d/61/8d4d619907c28a7e52f481e2f4a67ba8.jpg" alt="የኢትዮጵያ ፋሽን ዲዛይን">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location Section -->
-    <section class="location" id="location">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="amharic-title">አድራሻችን</h2>
-                <p class="amharic-text">በአዲስ አበባ ልብ ውስጥ የሚገኘውን ዋና መደብራችንን ይጎብኙ</p>
-            </div>
-            <div class="location-content">
-                <div class="location-info">
-                    <h3 class="amharic-title">ሶፊ ሽቲ ዋና መደብር</h3>
-                    <p class="amharic-text">በአዲስ አበባ በሚገኘው ሕያው አካባቢ የሚገኘው ዋና መደብራችን ሙሉውን የሶፊ ሽቲ ልምድ ይሰጥዎታል። ስብሰባችንን ይመልከቱ፣ የተጠለፈ የስታይል ምክር ያግኙ እና በምርጦቹ ኢትዮጵያዊ አስተናጋጅነት ይደሰቱ።</p>
-                    
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <div class="detail-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="detail-text">
-                                <h4 class="amharic-text">አድራሻ</h4>
-                                <p class="amharic-text">ቦሌ ሬሳላም, አዲስ አበባ, ኢትዮጵያ</p>
-                            </div>
-                        </div>
-                        
-                        <div class="detail-item">
-                            <div class="detail-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="detail-text">
-                                <h4 class="amharic-text">የሥራ ሰዓት</h4>
-                                <p class="amharic-text">ሰኞ - ቅዳሜ: 9:00 ጥዋት - 8:00 ማታ</p>
-                                <p class="amharic-text">እሁድ: 11:00 ጥዋት - 6:00 ማታ</p>
-                            </div>
-                        </div>
-                        
-                        <div class="detail-item">
-                            <div class="detail-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="detail-text">
-                                <h4 class="amharic-text">አድራሻ</h4>
-                                <p class="amharic-text">+251 11 123 4567</p>
-                                <p
+           
